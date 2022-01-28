@@ -15,6 +15,14 @@ class Koord:
         self.mperc = int(elemek[3])
 
 
+    def __repr__(self):
+        s = self.egtaj + " : "
+        s += str(self.fok)+" fok "
+        s += str(self.perc)+" perc "
+        s += str(self.mperc)+" másodperc. "
+        return(s)
+    
+
 
 class Varos:
     def __init__(self, sor):
@@ -60,21 +68,21 @@ def betoltes2():
 
 def kiiras():
     for v in varosok:
-        print("---------------------")
+        print("------------------------------------------")
         print("Város : {0} ({1}).".format(v["varos"], v["orszagkod"]))
         print("Szélesség : {0}.".format(v["szelesseg"]))
         print("Hosszúság : {0}.".format(v["hosszusag"]))
-        print("=====================")
+        print("==========================================")
 
 
 
 def kiiras2():
     for v in varosok:
-        print("---------------------")
+        print("------------------------------------------")
         print("Város : {0} ({1}).".format(v.varos, v.orszagkod))
         print("Szélesség : {0}.".format(v.szelesseg))
         print("Hosszúság : {0}.".format(v.hosszusag))
-        print("=====================")
+        print("==========================================")
 #programtörzs
 
 
