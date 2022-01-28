@@ -1,6 +1,4 @@
 
-#varos nev;országkód;szelesseg;hosszusag\n
-
 
 
 #modulok
@@ -8,13 +6,23 @@
 
 #osztályok
 
+class Koord:
+    def __init__(self, k):
+        elemek = k.split("-")
+        self.egtaj = elemek[0]
+        self.fok = int(elemek[1])
+        self.perc = int(elemek[2])
+        self.mperc = int(elemek[3])
+
+
+
 class Varos:
     def __init__(self, sor):
-      elemek = sor.strip("\n").split(";")
-      self.varos = elemek[0]
-      self.orszagkod = elemek[1]
-      self.szelesseg = elemek[2]
-      self.hosszusag = elemek[3]
+        elemek = sor.strip("\n").split(";")
+        self.varos = elemek[0]
+        self.orszagkod = elemek[1]
+        self.szelesseg = Koord(elemek[2])
+        self.hosszusag = Koord(elemek[3])
 
 
 #függvények
